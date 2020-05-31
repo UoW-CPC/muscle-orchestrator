@@ -47,7 +47,7 @@ def main():
 
 def muscle(in1, in2, out):
     (ret, out, err) = System.command(
-        ['bin/muscle3.8.31_i86darwin64', '-profile',
+        ['bin/muscle', '-profile',
          '-in1', in1,
          '-in2', in2,
          '-out', out])
