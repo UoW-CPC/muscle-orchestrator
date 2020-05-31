@@ -1,0 +1,108 @@
+2020-05-31 21:23:54 INFO     ---------------------
+2020-05-31 21:23:54 INFO     Profiler task Starts
+2020-05-31 21:23:54 INFO     ---------------------
+2020-05-31 21:23:54 INFO     List of afas files:
+2020-05-31 21:23:54 INFO     ../data/output/out1.afas
+2020-05-31 21:23:54 INFO     ../data/output/out2.afas
+2020-05-31 21:23:54 INFO     ../data/output/out3.afas
+2020-05-31 21:23:54 INFO     ../data/output/out4.afas
+2020-05-31 21:23:54 INFO     ../data/output/out5.afas
+2020-05-31 21:23:54 INFO     ../data/output/out6.afas
+2020-05-31 21:23:54 INFO     Merging the files with MUSCLE profile option
+2020-05-31 21:23:54 INFO     Profiling the first two files..
+2020-05-31 21:23:54 INFO     Running system command: bin/muscle3.8.31_i86darwin64 -profile -in1 ../data/output/out1.afas -in2 ../data/output/out2.afas -out ../data/profile/temp-1.afas
+2020-05-31 21:24:33 INFO     return, 0
+2020-05-31 21:24:33 INFO     output, b''
+2020-05-31 21:24:33 ERROR    error, b'\nMUSCLE v3.8.31 by Robert C. Edgar\n\nhttp://www.drive5.com/muscle\nThis software is donated to the public domain.\nPlease cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.\n\n00:00:00      1 MB(0%)  Reading ../data/output/out1.afas\n00:00:00      1 MB(0%)  5 seqs 29786 cols\n00:00:00      1 MB(0%)  Reading ../data/output/out2.afas\n00:00:00      2 MB(0%)  5 seqs 29786 cols\n00:00:00     19 MB(0%)  Aligning profiles\n00:00:39   967 MB(11%)  Building output\n00:00:39   967 MB(11%)  Writing output\n'
+2020-05-31 21:24:33 INFO     Profiling a single file..
+2020-05-31 21:24:33 INFO     Running system command: bin/muscle3.8.31_i86darwin64 -profile -in1 ../data/output/out3.afas -in2 ../data/profile/temp-1.afas -out ../data/profile/temp-2.afas
+2020-05-31 21:25:14 INFO     return, 0
+2020-05-31 21:25:14 INFO     output, b''
+2020-05-31 21:25:14 ERROR    error, b'\nMUSCLE v3.8.31 by Robert C. Edgar\n\nhttp://www.drive5.com/muscle\nThis software is donated to the public domain.\nPlease cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.\n\n00:00:00      1 MB(0%)  Reading ../data/output/out3.afas\n00:00:00      2 MB(0%)  8 seqs 29903 cols\n00:00:00      2 MB(0%)  Reading ../data/profile/temp-1.afas\n00:00:00      2 MB(0%)  10 seqs 29786 cols\n00:00:00     20 MB(0%)  Aligning profiles\n00:00:41   971 MB(11%)  Building output\n00:00:41   972 MB(11%)  Writing output\n'
+2020-05-31 21:25:14 INFO     Profiling a single file..
+2020-05-31 21:25:14 INFO     Running system command: bin/muscle3.8.31_i86darwin64 -profile -in1 ../data/output/out4.afas -in2 ../data/profile/temp-2.afas -out ../data/profile/temp-3.afas
+2020-05-31 21:25:56 INFO     return, 0
+2020-05-31 21:25:56 INFO     output, b''
+2020-05-31 21:25:56 ERROR    error, b'\nMUSCLE v3.8.31 by Robert C. Edgar\n\nhttp://www.drive5.com/muscle\nThis software is donated to the public domain.\nPlease cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.\n\n00:00:00      1 MB(0%)  Reading ../data/output/out4.afas\n00:00:00      2 MB(0%)  5 seqs 29786 cols\n00:00:00      2 MB(0%)  Reading ../data/profile/temp-2.afas\n00:00:00      3 MB(0%)  18 seqs 29903 cols\n00:00:00     20 MB(0%)  Aligning profiles\n00:00:42   968 MB(11%)  Building output\n00:00:42   969 MB(11%)  Writing output\n'
+2020-05-31 21:25:56 INFO     Profiling a single file..
+2020-05-31 21:25:56 INFO     Running system command: bin/muscle3.8.31_i86darwin64 -profile -in1 ../data/output/out5.afas -in2 ../data/profile/temp-3.afas -out ../data/profile/temp-4.afas
+2020-05-31 21:26:37 INFO     return, 0
+2020-05-31 21:26:37 INFO     output, b''
+2020-05-31 21:26:37 ERROR    error, b'\nMUSCLE v3.8.31 by Robert C. Edgar\n\nhttp://www.drive5.com/muscle\nThis software is donated to the public domain.\nPlease cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.\n\n00:00:00      1 MB(0%)  Reading ../data/output/out5.afas\n00:00:00      1 MB(0%)  5 seqs 29786 cols\n00:00:00      1 MB(0%)  Reading ../data/profile/temp-3.afas\n00:00:00      3 MB(0%)  23 seqs 29903 cols\n00:00:00     20 MB(0%)  Aligning profiles\n00:00:41   968 MB(11%)  Building output\n00:00:41   970 MB(11%)  Writing output\n'
+2020-05-31 21:26:37 INFO     Profiling the last file..
+2020-05-31 21:26:37 INFO     Running system command: bin/muscle3.8.31_i86darwin64 -profile -in1 ../data/output/out6.afas -in2 ../data/profile/temp-4.afas -out ../data/final/result.afas
+2020-05-31 21:27:16 INFO     return, 0
+2020-05-31 21:27:16 INFO     output, b''
+2020-05-31 21:27:16 ERROR    error, b'\nMUSCLE v3.8.31 by Robert C. Edgar\n\nhttp://www.drive5.com/muscle\nThis software is donated to the public domain.\nPlease cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.\n\n00:00:00      1 MB(0%)  Reading ../data/output/out6.afas\n00:00:00      2 MB(0%)  8 seqs 29903 cols\n00:00:00      2 MB(0%)  Reading ../data/profile/temp-4.afas\n00:00:00      3 MB(0%)  28 seqs 29903 cols\n00:00:00     21 MB(0%)  Aligning profiles\n00:00:39   972 MB(11%)  Building output\n00:00:39   975 MB(11%)  Writing output\n'
+2020-05-31 21:27:16 INFO     Please see the result in under folder data/final
+2020-05-31 21:27:16 INFO     ------------------------
+2020-05-31 21:27:16 INFO     Profiler task Completes
+2020-05-31 21:27:16 INFO     ------------------------
+2020-05-31 21:46:48 INFO     ------------------
+2020-05-31 21:46:48 INFO     Split task Starts
+2020-05-31 21:46:48 INFO     ------------------
+2020-05-31 21:46:48 INFO     input arguments: ['-f', '../../../gisaid_hcov-19_2020_03_13_aligned_edited.fas']
+2020-05-31 21:46:48 INFO     processing option: -f with arguments: ../../../gisaid_hcov-19_2020_03_13_aligned_edited.fas
+2020-05-31 21:46:48 INFO     Path:
+2020-05-31 21:46:48 INFO     ../../../gisaid_hcov-19_2020_03_13_aligned_edited.fas
+2020-05-31 21:46:48 INFO     File name:
+2020-05-31 21:46:48 INFO     gisaid_hcov-19_2020_03_13_aligned_edited.fas
+2020-05-31 21:46:48 INFO     Number of sequences:
+2020-05-31 21:46:48 INFO     368.0
+2020-05-31 21:46:48 INFO     The dataset is being splittted in files of 50 sequences.
+2020-05-31 21:46:48 INFO     Total files:
+2020-05-31 21:46:48 INFO     8
+2020-05-31 21:46:48 INFO     File names:
+2020-05-31 21:46:48 INFO     in-1-gisaid_hcov-19_2020_03_13_aligned_edited.fas
+2020-05-31 21:46:48 INFO     in-2-gisaid_hcov-19_2020_03_13_aligned_edited.fas
+2020-05-31 21:46:48 INFO     in-3-gisaid_hcov-19_2020_03_13_aligned_edited.fas
+2020-05-31 21:46:48 INFO     in-4-gisaid_hcov-19_2020_03_13_aligned_edited.fas
+2020-05-31 21:46:48 INFO     in-5-gisaid_hcov-19_2020_03_13_aligned_edited.fas
+2020-05-31 21:46:48 INFO     in-6-gisaid_hcov-19_2020_03_13_aligned_edited.fas
+2020-05-31 21:46:48 INFO     in-7-gisaid_hcov-19_2020_03_13_aligned_edited.fas
+2020-05-31 21:46:48 INFO     in-8-gisaid_hcov-19_2020_03_13_aligned_edited.fas
+2020-05-31 21:46:48 INFO     Start splitting the dataset..
+2020-05-31 21:46:48 INFO     Finish splitting the dataset..
+2020-05-31 21:46:48 INFO     ---------------------
+2020-05-31 21:46:48 INFO     Split task Completes
+2020-05-31 21:46:48 INFO     ---------------------
+2020-05-31 21:48:29 INFO     ---------------------
+2020-05-31 21:48:29 INFO     Profiler task Starts
+2020-05-31 21:48:29 INFO     ---------------------
+2020-05-31 21:48:29 INFO     List of afas files:
+2020-05-31 21:48:29 INFO     ../data/output/out1.afas
+2020-05-31 21:48:29 INFO     ../data/output/out2.afas
+2020-05-31 21:48:29 INFO     ../data/output/out3.afas
+2020-05-31 21:48:29 INFO     ../data/output/out4.afas
+2020-05-31 21:48:29 INFO     ../data/output/out5.afas
+2020-05-31 21:48:29 INFO     ../data/output/out6.afas
+2020-05-31 21:48:29 INFO     Merging the files with MUSCLE profile option
+2020-05-31 21:48:29 INFO     Profiling the first two files..
+2020-05-31 21:48:29 INFO     Running system command: bin/muscle3.8.31_i86darwin64 -profile -in1 ../data/output/out1.afas -in2 ../data/output/out2.afas -out ../data/profile/temp-1.afas
+2020-05-31 21:49:11 INFO     return, 0
+2020-05-31 21:49:11 INFO     output, b''
+2020-05-31 21:49:11 ERROR    error, b'\nMUSCLE v3.8.31 by Robert C. Edgar\n\nhttp://www.drive5.com/muscle\nThis software is donated to the public domain.\nPlease cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.\n\n00:00:00      1 MB(0%)  Reading ../data/output/out1.afas\n00:00:00      1 MB(0%)  5 seqs 29786 cols\n00:00:00      1 MB(0%)  Reading ../data/output/out2.afas\n00:00:00      2 MB(0%)  5 seqs 29786 cols\n00:00:00     19 MB(0%)  Aligning profiles\n00:00:41   957 MB(11%)  Building output\n00:00:41   958 MB(11%)  Writing output\n'
+2020-05-31 21:49:11 INFO     Profiling a single file..
+2020-05-31 21:49:11 INFO     Running system command: bin/muscle3.8.31_i86darwin64 -profile -in1 ../data/output/out3.afas -in2 ../data/profile/temp-1.afas -out ../data/profile/temp-2.afas
+2020-05-31 21:49:49 INFO     return, 0
+2020-05-31 21:49:49 INFO     output, b''
+2020-05-31 21:49:49 ERROR    error, b'\nMUSCLE v3.8.31 by Robert C. Edgar\n\nhttp://www.drive5.com/muscle\nThis software is donated to the public domain.\nPlease cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.\n\n00:00:00      1 MB(0%)  Reading ../data/output/out3.afas\n00:00:00      2 MB(0%)  8 seqs 29903 cols\n00:00:00      2 MB(0%)  Reading ../data/profile/temp-1.afas\n00:00:00      2 MB(0%)  10 seqs 29786 cols\n00:00:00     20 MB(0%)  Aligning profiles\n00:00:38   971 MB(11%)  Building output\n00:00:38   972 MB(11%)  Writing output\n'
+2020-05-31 21:49:49 INFO     Profiling a single file..
+2020-05-31 21:49:49 INFO     Running system command: bin/muscle3.8.31_i86darwin64 -profile -in1 ../data/output/out4.afas -in2 ../data/profile/temp-2.afas -out ../data/profile/temp-3.afas
+2020-05-31 21:50:23 INFO     return, 0
+2020-05-31 21:50:23 INFO     output, b''
+2020-05-31 21:50:23 ERROR    error, b'\nMUSCLE v3.8.31 by Robert C. Edgar\n\nhttp://www.drive5.com/muscle\nThis software is donated to the public domain.\nPlease cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.\n\n00:00:00      1 MB(0%)  Reading ../data/output/out4.afas\n00:00:00      1 MB(0%)  5 seqs 29786 cols\n00:00:00      1 MB(0%)  Reading ../data/profile/temp-2.afas\n00:00:00      3 MB(0%)  18 seqs 29903 cols\n00:00:00     20 MB(0%)  Aligning profiles\n00:00:34   968 MB(11%)  Building output\n00:00:34   969 MB(11%)  Writing output\n'
+2020-05-31 21:50:23 INFO     Profiling a single file..
+2020-05-31 21:50:23 INFO     Running system command: bin/muscle3.8.31_i86darwin64 -profile -in1 ../data/output/out5.afas -in2 ../data/profile/temp-3.afas -out ../data/profile/temp-4.afas
+2020-05-31 21:51:06 INFO     return, 0
+2020-05-31 21:51:06 INFO     output, b''
+2020-05-31 21:51:06 ERROR    error, b'\nMUSCLE v3.8.31 by Robert C. Edgar\n\nhttp://www.drive5.com/muscle\nThis software is donated to the public domain.\nPlease cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.\n\n00:00:00      1 MB(0%)  Reading ../data/output/out5.afas\n00:00:00      2 MB(0%)  5 seqs 29786 cols\n00:00:00      2 MB(0%)  Reading ../data/profile/temp-3.afas\n00:00:00      3 MB(0%)  23 seqs 29903 cols\n00:00:00     20 MB(0%)  Aligning profiles\n00:00:43   968 MB(11%)  Building output\n00:00:43   970 MB(11%)  Writing output\n'
+2020-05-31 21:51:06 INFO     Profiling the last file..
+2020-05-31 21:51:06 INFO     Running system command: bin/muscle3.8.31_i86darwin64 -profile -in1 ../data/output/out6.afas -in2 ../data/profile/temp-4.afas -out ../data/final/result.afas
+2020-05-31 21:51:46 INFO     return, 0
+2020-05-31 21:51:46 INFO     output, b''
+2020-05-31 21:51:46 ERROR    error, b'\nMUSCLE v3.8.31 by Robert C. Edgar\n\nhttp://www.drive5.com/muscle\nThis software is donated to the public domain.\nPlease cite: Edgar, R.C. Nucleic Acids Res 32(5), 1792-97.\n\n00:00:00      1 MB(0%)  Reading ../data/output/out6.afas\n00:00:01      2 MB(0%)  8 seqs 29903 cols\n00:00:01      2 MB(0%)  Reading ../data/profile/temp-4.afas\n00:00:01      3 MB(0%)  28 seqs 29903 cols\n00:00:01     21 MB(0%)  Aligning profiles\n00:00:40   972 MB(11%)  Building output\n00:00:40   975 MB(11%)  Writing output\n'
+2020-05-31 21:51:46 INFO     Please see the result in under folder data/final
+2020-05-31 21:51:46 INFO     ------------------------
+2020-05-31 21:51:46 INFO     Profiler task Completes
+2020-05-31 21:51:46 INFO     ------------------------
