@@ -25,7 +25,7 @@ def main():
         Log.exit()
     Log.info('Number of sequences:')
     Log.info(lines/2)
-    Log.info('The dataset is being splittted in files of 50 sequences.')
+    Log.info('The dataset is being split in files of 50 sequences.')
     Log.info('Total files:')
     filesNumber = math.ceil(lines/100)
     Log.info(filesNumber)
