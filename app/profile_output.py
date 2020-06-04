@@ -39,7 +39,7 @@ def main():
             Log.info("output, {}".format(out))
             Log.error("error, {}".format(err))
         count = count + 1
-    Log.info('Please see the result in under folder data/final')
+    Log.info('Please see the results in folder data/final')
     Log.info('------------------------')
     Log.info('Profiler task Completes')
     Log.info('------------------------')
