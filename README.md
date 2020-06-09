@@ -82,7 +82,7 @@ A MiCADO Scale deployment guide is not in the scope of this guide. Please, feel 
 __Notice__: jQueuer is an application that creates a queue of jobs and sends these jobs to MiCADO worker nodes. The worker nodes execute the jobs and when a job completes jQeuer send another job from the queue.
 This allow us to automate the process by defining several jobs and start them in multiple worker nodes.
 
-If you have jQeuer deployed through MiCADO, follow this steps to perform your MSA:
+If you have jQeuer deployed through MiCADO, follow these steps to perform your MSA:
 
 Create a jQueuer expirement file:
 
