@@ -149,8 +149,8 @@ python3 profile_output.py
 __Notice:__ The application is designed to work in a linux platform. In case you want to change platform to Mac OSX or MS Windows put MUSCLE version for your Platform into the folder 'app/bin' and rename it to 'MUSCLE'.
 
  The above script performs several actions:
- 1. Passes to the MUSCLE the first two files from the 'data/output' folder and writes the output 'temp-1.afas' in the 'data/profile' folder.
- 2. Passes to the MUSCLE the third file from the 'data/output' folder and the 'temp-1.afas' from the 'data/profile', and writes the output 'temp-2.afas' in the 'data/profile' folder.
+ 1. Passes to a MUSCLE process the first two files from the 'data/output' folder and writes the output 'temp-1.afas' in the 'data/profile' folder.
+ 2. Passes to a MUSCLE process the third file from the 'data/output' folder and the 'temp-1.afas' from the 'data/profile', and writes the output 'temp-2.afas' in the 'data/profile' folder.
  3. Repeat the 2 step until all files have been processed.
  4. In the last iteration in step 3 MUSCLE takes as input the last file from the 'data/output' folder and the last file created in the 'data/profile', and writes the output 'results.afas' to the folder 'data/result'.
  5. Writes details related to this process to a log file into the folder 'logs'. Log filename: muscle-orchestrator.log.
