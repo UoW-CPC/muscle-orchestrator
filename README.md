@@ -3,7 +3,7 @@
 ## Introduction
 This application is a parallel implementation of the MSA (Multiple Sequence Alignment) tool [MUSCLE](https://www.drive5.com/muscle/).
 
-MUSCLE is an well-known tool that utilises a single core to perform MSA. To improve performance, MUSCLE is being parallelised by utilising [Docker](https://www.docker.com/).
+MUSCLE is an well-known tool that utilises a single CPU core to perform MSA. To improve performance, MUSCLE is being parallelised by utilising [Docker](https://www.docker.com/).
 With this approach MUSCLE runs on several [containers](https://www.docker.com/resources/what-container) and each container analyse a different set of data.
 
 To more detail, the application implements the parallel solution in three phases:
