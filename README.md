@@ -105,7 +105,7 @@ For every MUSCLE container we see a log file in the folder 'data/logs'. In this 
 
 When all jobs are completed you will have an output file for each input file.
 
-You can now go to phase 3 and merge the results with MUSCLE profile option.
+You can now go to phase 3 and merge the results with the MUSCLE profile option.
 
 #### Standalone Solution
 
@@ -130,6 +130,8 @@ Starting a MUSCLE container:
 __Warning:__ Each container requires resources to run, so run in parallel as many containers you system can handle.
 
 You can view the logs for this process in the folder 'data/logs'. In this folder there is one log file for each container you start. These log files contain information about input/output files, and the MUSCLE processes.
+
+You can now go to phase 3 and merge the results with the MUSCLE profile option.
 
 ### Phase 3 - Merge the outputs with MUSCLE profile.
 
