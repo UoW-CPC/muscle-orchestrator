@@ -7,7 +7,7 @@ from app.lib.logsys import Log
 
 def main():
     Log.info('------------------')
-    Log.info('Split task Starts')
+    Log.info('Split Task Starts')
     Log.info('------------------')
     inputArgs = sys.argv
     args = inputArgs[1:]
@@ -58,7 +58,7 @@ def main():
         Log.error(e)
         Log.exit()
     Log.info('---------------------')
-    Log.info('Split task Completes')
+    Log.info('Split Task Completes')
     Log.info('---------------------')
 
 if __name__ == "__main__":

@@ -3,7 +3,7 @@
 ## Introduction
 This application is a parallel implementation of the MSA (Multiple Sequence Alignment) tool [MUSCLE](https://www.drive5.com/muscle/).
 
-MUSCLE is an well-known tool that utilises a single core to perform MSA analysis. To improve performance, MUSCLE is being parallelised by utilising [Docker](https://www.docker.com/).
+MUSCLE is an well-known tool that utilises a single core to perform MSA. To improve performance, MUSCLE is being parallelised by utilising [Docker](https://www.docker.com/).
 With this approach MUSCLE runs on several [containers](https://www.docker.com/resources/what-container) and each container analyse a different set of data.
 
 To more detail, the application implements the parallel solution in three phases:
@@ -18,9 +18,9 @@ In case that the working machine analyse X sequences in T minutes, with the abov
 
 This guide introduces two use cases:
 1. A __Cloud Solution__ with [MiCADO Scale](https://micado-scale.eu/). MiCADO Scale is develop under the EU project [COLA](https://project-cola.eu/). Requires MiCADO Scale, for installation instructions see [here](https://micado-scale.readthedocs.io/en/latest/).
-2. A __Standalone Solution__ for a single working machine. Requires Docker, for instalation instructions see [here](https://docs.docker.com/get-docker/).
+2. A __Standalone Solution__ for a single working machine. Requires Docker, for installation instructions see [here](https://docs.docker.com/get-docker/).
 
-__Important:__ This guide includes sections with instructions for each use case. Please review sections _Cloud Solution_ and _Standalone Solution_ before you continue.
+__Important:__ This guide includes sections with different instructions for each use case. Please review sections _Cloud Solution_ and _Standalone Solution_ before you to choose which use case fulfils your requirements.
 
 
 ### Downloading the application
@@ -40,10 +40,10 @@ There by using the command:
 ls
  ```
 You can see three folders and one file:
-* __app__ - folder - contains Python scripts, MUSCLE binaries and a Java tool (only for Cloud Solution) to perform the various phases.
+* __app__ - folder - contains Python scripts, MUSCLE binaries and a Java tool (for the Cloud use case).
 * __data__ - folder - contains data used by MUSCLE.
 * __logs__ - folder - contains application logs.
-* __README.md__ - folder - application guide.
+* __README.md__ - folder - application guide.cat
 
 
 ### Phase 1 - Split the dataset
@@ -51,13 +51,17 @@ You can see three folders and one file:
  __Important:__ Python 3 is required.
 
  ```
- python3 -f /PATH_TO_THE_DATASET
- # Sample command: python3 -f /data/full_dataset.fas
+ # move to the app directory
+ cd app
+ python3 split_input.py -f /PATH_TO_THE_DATASET
+ # Sample command: python3 split_input.py -f ../data/full_dataset.fas
+ # move again to the parent directory
+ cd ..
  ```
  This sample command performs several steps:
- 1. Reads the file full_dataset.fas from the folder 'data'.
+ 1. Reads the file 'full_dataset.fas' from the folder 'data'.
  2. Splits the dataset in fas files of 50 sequences and save the files in folder 'data/input'.
- 3. Adds a prefix to the input files, e.g. in-1-full_dataset.fas, in2-2-full_dataset.fas
+ 3. Adds a prefix to the input files, e.g. 'in-1-full_dataset.fas', 'in2-2-full_dataset.fas'.
  4. Creates a log file into the folder 'logs'. Log filename: muscle-orchestrator.log.
 
  Example: In case the full_dataset.fas file contains 120 sequences, this result to three files in the input folder:
@@ -68,7 +72,7 @@ You can see three folders and one file:
 
  ### Phase 2 - MUSCLE parallel execution
 
-In this phase we perform MSA for the files created in the previous step. From the proposed solutions choose the one that fits to your needs.
+In this phase we perform MSA for the files created in the previous step. As mention previously from the two use case choose the one that fulfills your requirements.
 
 #### Cloud Solution
 
@@ -95,11 +99,14 @@ This process instruct the worker node to run MUSCLE into a container and defines
 Your can now go to phase 3 and merge the results with MUSCLE profile option.
 
 #### Standalone Solution
-Here we don't have jQueuer and MiCADO to automate the process for us; therefore we manually start MUSCLE containers for all the input files.
 
-__Warning:__ each container requires resources, so run in paraller as many containers you system can handle.
+In this scenario you manually start a MUSCLE container for every input file.
+
+__Warning:__ Each container requires resources to run, so run in parallel as many containers you system can handle.
+
+Starting a MUSCLE container:
 Manual start a MUSCLE container for each file.
-1. Define input
+sudo docker run -it -v ${PWD}:/muscle/data/output/ dkagialis/muscle:0.4 /muscle/app/execute.sh ../data/input/in3.fas
 2. Run a container
 3. for MUSCLE container we see an output file out-1-
 4. for MUSCLE container we see a log file in
