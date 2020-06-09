@@ -84,7 +84,8 @@ This allow us to automate the process by defining several jobs and start them in
 
 If you have jQeuer deployed through MiCADO, follow this steps to perform your MSA:
 
-1. Create a jQueuer expirement file.
+Create a jQueuer expirement file:
+
 __Important:__ Java 8 and above is required
 
  ```
@@ -95,13 +96,16 @@ java -jar files-to-jobs.jar ../../data/input/ jobs.json
  # Move back to the parent folder
  cd ..
  ```
-2. Take the jobs.json file from the 'app/bin' folder and submit it to the jQueuer web interface.
+Take the jobs.json file from the 'app/bin' folder and submit it to the jQueuer web interface.
 This process instructs the worker nodes to run MUSCLE into containers and passes to them parameters for input and output data.
-3. For every MUSCLE container we see an output file in the folder 'data/output', e.g. out-1-dataset.afas.
-4. For every MUSCLE container we see a log file in the folder 'data/logs'. In this folder there is one log file for each container you start. These log files contain information about input/output files, and MUSCLE processes.
-5. When all jobs are completed you will have an output file for each input file.
 
-Your can now go to phase 3 and merge the results with MUSCLE profile option.
+For every MUSCLE container we see an output file in the folder 'data/output', e.g. out-1-dataset.afas.
+
+For every MUSCLE container we see a log file in the folder 'data/logs'. In this folder there is one log file for each container you start. These log files contain information about input/output files, and MUSCLE processes.
+
+When all jobs are completed you will have an output file for each input file.
+
+You can now go to phase 3 and merge the results with MUSCLE profile option.
 
 #### Standalone Solution
 
