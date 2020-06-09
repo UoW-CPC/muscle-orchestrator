@@ -93,11 +93,11 @@ __Important:__ Java 8 and above is required
  cd data/bin
  # Create the JSON file
 java -jar files-to-jobs.jar ../../data/input/ jobs.json
- # Move back to the parent folder
- cd ..
+ # Move back to the project parent folder
+ cd ../..
  ```
 Take the jobs.json file from the 'app/bin' folder and submit it to the jQueuer web interface.
-This process instructs the worker nodes to run MUSCLE into containers and passes to them parameters for input and output data.
+jQueuer starts instructing the worker nodes to run MUSCLE into containers and passes to them parameters for input and output data.
 
 For every MUSCLE container we see an output file in the folder 'data/output', e.g. out-1-dataset.afas.
 
