@@ -146,7 +146,7 @@ MUSCLE profile:
  cd app
 python3 profile_output.py
  ```
-__Notice:__ The application is designed to work in a linux platform. In case you want to change platform to Mac OSX or MS Windows put the MUSCLE tool into the folder 'app/bin' and rename it to 'MUSCLE'.
+__Notice:__ The application is designed to work in a linux platform. In case you want to change platform to Mac OSX or MS Windows put MUSCLE version for your Platform into the folder 'app/bin' and rename it to 'MUSCLE'.
 
  The above script performs several actions:
  1. Passes to the MUSCLE the first two files from the 'data/output' folder and writes the output 'temp-1.afas' in the 'data/profile' folder.
