@@ -58,6 +58,7 @@ You can see three folders and one file:
  1. Reads the file full_dataset.fas from the folder 'data'.
  2. Splits the dataset in fas files of 50 sequences and save the files in folder 'data/input'.
  3. Adds a prefix to the input files, e.g. in-1-full_dataset.fas, in2-2-full_dataset.fas
+ 4 . LOGs
 
  Example: In case the full_dataset.fas file contains 120 sequences, this result to three files in the input folder:
  * in-1-full_dataset.fas, file that contains 50 sequences, 1 to 50
@@ -74,19 +75,19 @@ In this phase we perform MSA for the files created in the previous step. From th
 To follow this solution, jQueuer application needs to be deployed through MiCADO in a Cloud environments.
 A MiCADO Scale deployment guide is not in the scope of this guide. Please, feel free to ask for guidance by contacting us [here](https://micado-scale.eu/contact/).
 
-__Notice__:jQueuer is an application that creates a queue of jobs and sends these jobs to MiCADO worker nodes. The worker nodes execute the jobs and when a job completes jQeuer send another job from the queue.
+__Notice__: jQueuer is an application that creates a queue of jobs and sends these jobs to MiCADO worker nodes. The worker nodes execute the jobs and when a job completes jQeuer send another job from the queue.
 This allow us to automate the process by defining several jobs and start them in multiple worker nodes.
 
+Follow this steps to perform:
 
-
-
-
-
-
+1. MUSCLE
+2. input
+3. output
+4. logs
 
 
 #### Standalone Solution
 
-
+### Phase 3 - Merge outputs with MUSCLE profile.
 
  __Important:__ Your dataset must contain more than 100 sequences. Otherwise you might get unexpected results
