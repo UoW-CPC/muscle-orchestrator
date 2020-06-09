@@ -71,10 +71,10 @@ In this phase we perform MSA for the files created in the previous step. From th
 
 #### Cloud Solution
 
-__Warning__: To follow this solution, jQueuer application needs to be deployed through MiCADO in a Cloud environments.
+To follow this solution, jQueuer application needs to be deployed through MiCADO in a Cloud environments.
 A MiCADO Scale deployment guide is not in the scope of this guide. Please, feel free to ask for guidance by contacting us [here](https://micado-scale.eu/contact/).
 
-__Notice__: jQueuer is an application that creates a queue of jobs and sends these jobs to MiCADO worker nodes. The worker nodes execute the jobs and when a job completes jQeuer send another job from the queue.
+__Notice__:jQueuer is an application that creates a queue of jobs and sends these jobs to MiCADO worker nodes. The worker nodes execute the jobs and when a job completes jQeuer send another job from the queue.
 This allow us to automate the process by defining several jobs and start them in multiple worker nodes.
 
 
