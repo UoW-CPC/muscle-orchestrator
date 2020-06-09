@@ -3,14 +3,15 @@
 ## Introduction
 THis application is a parallel implementation of the MSA (Multiple Sequence Alignment) tool [MUSCLE](https://www.drive5.com/muscle/).
 
-MUSCLE is a well-know tool that utilises a single core to perform the analysis. Therefore, to improve performance, MUSCLE is being parallelised by utilising [Docker Technologies](https://www.docker.com/).
+MUSCLE is a well-know tool that utilises a single core to perform the analysis. To improve performance, MUSCLE is being parallelised by utilising [Docker](https://www.docker.com/).
 With this approach MUSCLE runs on several [containers](https://www.docker.com/resources/what-container) and each container analysis a different set of data.
 
-To more detail application implements the parallel solution in three steps:
+To more detail application implements the parallel solution in three phases:
 1. Split the dataset (fas file) into smaller datasets (fas files) of 50 sequences.
 2. Parallel execution of MUSCLE into several containers. Each container will analyse a different dataset.
-3. Merge the output of these MUSCLE processes (afas files) with the MUSCLE profile option, and get the final output (afas file)
+3. Merge the output of these MUSCLE processes (afas files) with the MUSCLE profile option, and get the final output (afas file).
 
+__Expected performance:__
 In case that the working machine analysis X sequences in T minutes, with the above process the performance gain for N parallel containers is approximately: ( N * X ) sequence in T minutes.
 
 ## Getting Started Guide
