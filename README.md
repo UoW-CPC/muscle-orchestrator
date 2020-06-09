@@ -1,9 +1,9 @@
 # muscle-orchestrator
 
 ## Introduction
-THis application is a parallel implementation of the MSA (Multiple Sequence Alignment) tool [MUSCLE](https://www.drive5.com/muscle/).
+This application is a parallel implementation of the MSA (Multiple Sequence Alignment) tool [MUSCLE](https://www.drive5.com/muscle/).
 
-MUSCLE is a well-know tool that utilises a single core to perform the analysis. To improve performance, MUSCLE is being parallelised by utilising [Docker](https://www.docker.com/).
+MUSCLE is a established tool that utilises a single core to perform the analysis. To improve performance, MUSCLE is being parallelised by utilising [Docker](https://www.docker.com/).
 With this approach MUSCLE runs on several [containers](https://www.docker.com/resources/what-container) and each container analysis a different set of data.
 
 To more detail application implements the parallel solution in three phases:
@@ -17,8 +17,8 @@ In case that the working machine analysis X sequences in T minutes, with the abo
 ## Getting Started Guide
 
 This guide introduces two use cases:
-1. A deadline-based __cloud solution__ with the [MiCADO Scale](https://micado-scale.eu/). Requires MiCADO scale, MiCADO is develop under the EU project [COLA](https://project-cola.eu/) Cloud Orchestration at the Level of the Application.
-2. A __standalone solution__ for a single working machine. Requires [Docker engine](https://docs.docker.com/get-docker/).
+1. A deadline-based __Cloud Solution__ with the [MiCADO Scale](https://micado-scale.eu/). MiCADO is develop under the EU project [COLA](https://project-cola.eu/) Cloud Orchestration at the Level of the Application. For instruction on how to install Docker please click [here](https://micado-scale.readthedocs.io/en/latest/).
+2. A __Standalone Solution__ for a single working machine. For instruction on how to install Docker please click [here](https://docs.docker.com/get-docker/).
 
 This guide includes sections with instructions for each use case.
 
