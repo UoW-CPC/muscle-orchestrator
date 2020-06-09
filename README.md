@@ -17,12 +17,10 @@ In case that the working machine analysis X sequences in T minutes, with the abo
 ## Getting Started Guide
 
 This guide introduces two use cases:
-1. A deadline-based __Cloud Solution__ with [MiCADO Scale](https://micado-scale.eu/). MiCADO Scale is develop under the EU project [COLA](https://project-cola.eu/) Cloud Orchestration at the Level of the Application. Requires MiCADO Scale, [installation instructions](https://micado-scale.readthedocs.io/en/latest/).
+1. A deadline-based __Cloud Solution__ with [MiCADO Scale](https://micado-scale.eu/). MiCADO Scale is develop under the EU project [COLA](https://project-cola.eu/) Cloud Orchestration at the Level of the Application. Requires MiCADO Scale, [Installation guide](https://micado-scale.readthedocs.io/en/latest/).
 2. A __Standalone Solution__ for a single working machine. Requires Docker, [Installation guide](https://docs.docker.com/get-docker/).
 
-This guide includes sections with instructions for each use case.
-
-__Important:__ Please review sections _Cloud Solution_ and _Standalone Solution_ before you continue.
+__Important:__ This guide includes sections with instructions for each use case. Please review sections _Cloud Solution_ and _Standalone Solution_ before you continue.
 
 
 ### Downloading the application
