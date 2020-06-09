@@ -108,15 +108,17 @@ Starting a MUSCLE container:
  # Move to the data folder
  cd data
  # Run a MUSCLE container for a single file
- sudo docker run -it -v ${PWD}:/muscle/data/ dkagialis/muscle:0.4 /muscle/app/execute.sh ../data/input/PUT_THE_FILE
+ sudo docker run -it -v ${PWD}:/muscle/data/ dkagialis/muscle:0.4 /muscle/app/execute.sh ../data/input/FILENAME
  # Sample command: sudo docker run -it -v ${PWD}:/muscle/data/ dkagialis/muscle:0.4 /muscle/app/execute.sh ../data/input/in-1-dataset.fas
  ```
 
- The container initiates a MUSCLE process, takes as an input the given file and writes the output in the folder 'data/output'. The process change again the prefix in the outfile, e.g. out-1-dataset.afas in our case.
+ The container initiates a MUSCLE process, takes as an input the given file, and writes the output in the folder 'data/output'. The process changes the prefix from 'in' to 'out'for the output file, e.g. out-1-dataset.afas in our case.
 
  Repeat the above steps until you analyse all your files. When all jobs are completed you will have an output file for each input file.
 
 __Warning:__ Each container requires resources to run, so run in parallel as many containers you system can handle.
+
+You can view the log for this process in the folder 'data/logs'. In this folder there is one log file for each container you start. These log files contain information about the input, output files, and MUSCLE phases.
 
 ### Phase 3 - Merge the outputs with MUSCLE profile.
 
