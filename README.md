@@ -103,6 +103,7 @@ Your can now go to phase 3 and merge the results with MUSCLE profile option.
 In this scenario you manually start a MUSCLE container for every input file.
 
 Starting a MUSCLE container:
+
  ```
  # Move to the data folder
  cd data
@@ -110,6 +111,7 @@ Starting a MUSCLE container:
  sudo docker run -it -v ${PWD}:/muscle/data/ dkagialis/muscle:0.4 /muscle/app/execute.sh ../data/input/PUT_THE_FILE
  # Sample command: sudo docker run -it -v ${PWD}:/muscle/data/ dkagialis/muscle:0.4 /muscle/app/execute.sh ../data/input/in-1-dataset.fas
  ```
+
  The container initiates a MUSCLE process, takes as an input the given file and writes the output in the folder 'data/output'. The process change again the prefix in the outfile, e.g. out-1-dataset.afas in our case.
 
  Repeat the above steps until you analyse all your files. When all jobs are completed you will have an output file for each input file.
