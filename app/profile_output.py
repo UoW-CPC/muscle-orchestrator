@@ -7,7 +7,7 @@ from app.lib.system import System
 
 def main():
     Log.info('---------------------')
-    Log.info('Profiler task Starts')
+    Log.info('Profiler Task Starts')
     Log.info('---------------------')
     files = Filesystem.getFiles()
     Log.info("List of afas files:")
@@ -41,7 +41,7 @@ def main():
         count = count + 1
     Log.info('Please see the results in folder data/final')
     Log.info('------------------------')
-    Log.info('Profiler task Completes')
+    Log.info('Profiler Task Completes')
     Log.info('------------------------')
 
 
