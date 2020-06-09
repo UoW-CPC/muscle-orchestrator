@@ -135,6 +135,7 @@ MUSCLE profile:
  cd app
 python3 profile_output.py
  ```
+__Notice:__ The application is designed to work in a linux platform. In case you want to change platform to Mac OSX or MS Windows put the MUSCLE tool into the folder 'app/bin' and rename it to 'MUSCLE'.
 
  The above script performs several actions:
  1. Passes to the MUSCLE the first two files from the 'data/output' folder and writes the output 'temp-1.afas' in the 'data/profile' folder.
@@ -144,4 +145,5 @@ python3 profile_output.py
  5. Writes details related to this process to a log file into the folder 'logs'. Log filename: muscle-orchestrator.log.
 
  __Important:__ Your dataset must contain more than 100 sequences. Otherwise you might get unexpected results.
+
 
