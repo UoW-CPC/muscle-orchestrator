@@ -127,7 +127,7 @@ Starting a MUSCLE container:
 
  Repeat the above steps until you analyse all your files. When all jobs are completed you will have an output file for each input file.
 
-__Warning:__ Each container requires resources to run, so run in parallel as many containers you system can handle.
+__Warning:__ Each container requires resources to run, so run in parallel as many containers your system can handle.
 
 You can view the logs for this process in the folder 'data/logs'. In this folder there is one log file for each container you start. These log files contain information about input/output files, and the MUSCLE processes.
 
@@ -137,7 +137,7 @@ You can now go to phase 3 and merge the results with the MUSCLE profile option.
 
 Having completed phase 2, in the folder 'data/output' there are several afas file (one for each input file). At this point the MUSCLE profile option is being used to merge all these files.
 
-The above process is being performed by the application. The application iteratively parses all the files in the output folder and initiates MUSCLE as many times is required to merge them in a single afas file.
+The above process is being performed by this application. The application iteratively parses all the files in the output folder and initiates MUSCLE as many times is required to merge all the afas into a single afas file.
 
 MUSCLE profile:
 
