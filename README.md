@@ -20,7 +20,7 @@ This guide introduces two use cases:
 1. A __Cloud Solution__ with [MiCADO Scale](https://micado-scale.eu/). MiCADO Scale is develop under the EU project [COLA](https://project-cola.eu/). Requires MiCADO Scale, for installation instructions see [here](https://micado-scale.readthedocs.io/en/latest/).
 2. A __Standalone Solution__ for a single working machine. Requires Docker, for installation instructions see [here](https://docs.docker.com/get-docker/).
 
-__Important:__ This guide includes sections with different instructions for each use case. Please review sections _Cloud Solution_ and _Standalone Solution_ before you to choose which use case fulfils your requirements.
+__Important:__ This guide includes sections with different instructions for each use case. Please review sections _Cloud Solution_ and _Standalone Solution_ to help you to choose which use case fulfils your requirements.
 
 
 ### Downloading the application
