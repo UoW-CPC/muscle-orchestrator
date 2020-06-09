@@ -139,6 +139,8 @@ Having completed phase 2, in the folder 'data/output' there are several afas fil
 
 The above process is being performed by this application. The application iteratively parses all the files in the output folder and initiates MUSCLE as many times is required to merge all the afas into a single afas file.
 
+ __Warning:__ Your dataset must contain more than 100 sequences. Otherwise you might get unexpected results.
+ 
 MUSCLE profile:
 
  ```
@@ -152,9 +154,10 @@ __Notice:__ The application is designed to work in a linux platform. In case you
  1. Passes to a MUSCLE process the first two files from the 'data/output' folder and writes the output 'temp-1.afas' in the 'data/profile' folder.
  2. Passes to a MUSCLE process the third file from the 'data/output' folder and the 'temp-1.afas' from the 'data/profile', and writes the output 'temp-2.afas' in the 'data/profile' folder.
  3. Repeat the 2 step until all files have been processed.
- 4. In the last iteration in step 3 MUSCLE takes as input the last file from the 'data/output' folder and the last file created in the 'data/profile', and writes the output 'results.afas' to the folder 'data/result'.
- 5. Writes details related to this process to a log file into the folder 'logs'. Log filename: muscle-orchestrator.log.
+ 4. In the last iteration of step 3, MUSCLE takes as an input the last file from the 'data/output' folder and the last temp file created in the 'data/profile', and writes the output 'results.afas' to the folder 'data/final'.
 
- __Important:__ Your dataset must contain more than 100 sequences. Otherwise you might get unexpected results.
+Details related to this process are being writen to the log file into the folder 'logs'. Log filename: muscle-orchestrator.log.
+
+
 
 
