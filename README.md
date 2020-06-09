@@ -12,13 +12,14 @@ To more detail application implements the parallel solution in three phases:
 3. Merge the output of these MUSCLE processes (afas files) with the MUSCLE profile option, and get the final output (afas file).
 
 __Expected performance:__
-In case that the working machine analysis X sequences in T minutes, with the above process the performance gain for N parallel containers is approximately: ( N * X ) sequence in T minutes.
+In case that the working machine analysis X sequences in T minutes, with the above process the performance gain for N parallel containers is approximately ( N * X ) sequence in T minutes.
 
 ## Getting Started Guide
 
-This guide introduces two alternative use cases:
-1. A deadline-based solution in __Cloud__ with the [MiCADO Scale framework](https://micado-scale.eu/). MiCADO is develop under the EU project [COLA](https://project-cola.eu/) - Cloud Orchestration at the Level of the Application.
-2. A standalone solution for a single working machine. Requires (Docker engine)[https://docs.docker.com/get-docker/].
+This guide introduces two use cases:
+1. A deadline-based __cloud solution__ with the [MiCADO Scale](https://micado-scale.eu/). MiCADO is develop under the EU project [COLA](https://project-cola.eu/) Cloud Orchestration at the Level of the Application.
+2. A __standalone solution__ for a single working machine. Requires [Docker engine](https://docs.docker.com/get-docker/).
+
 The first step is to download the application in your working environment.
 To do so, use the download link, or run the following command in your terminal:
 ,,,
