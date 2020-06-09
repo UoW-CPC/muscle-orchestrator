@@ -41,11 +41,13 @@ ls
  ```
 
 You can see three folders and one file:
-* __app__ - folder - contains the tools
-* __data__ - folder -
-* __logs__ - folder -
-* __README.md__ - folder -
+* __app__ - folder - contains Python scripts, MUSCLE binaries and a Java tool (only for Cloud Solution) to perform the various phases.
+* __data__ - folder - contains data used by MUSCLE.
+* __logs__ - folder - contains application logs.
+* __README.md__ - folder - application guide.
 
 ### Cloud Solution
+
+
 
 ### Standalone Solution
