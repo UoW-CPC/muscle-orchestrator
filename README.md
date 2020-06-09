@@ -87,6 +87,7 @@ If you have jQeuer deployed through MiCADO, follow this steps to perform your MS
 1. Create a jQueuer expirement file.
 __Important:__ Java 8 and above is required
 
+ ```
  # Move to the data/bin folder
  cd data/bin
  # Create the JSON file
