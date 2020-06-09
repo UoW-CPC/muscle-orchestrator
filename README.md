@@ -30,7 +30,7 @@ To do so, use the download link, or run the following command in your terminal:
 git clone https://github.com/UoW-CPC/muscle-orchestrator.git
  ```
 
-Then move into muscle-orchestrator folder.
+Then move into muscle-orchestrator folder:
  ```
 cd muscle-orchestrator
  ```
@@ -41,7 +41,7 @@ ls
  ```
 You can see three folders and one file:
 * __app__ - folder - contains Python scripts, MUSCLE binaries and a Java tool (for the Cloud use case).
-* __data__ - folder - contains data used by MUSCLE.
+* __data__ - folder - contains data used by MUSCLE, and containers logs.
 * __logs__ - folder - contains application logs.
 * __README.md__ - folder - application guide.cat
 
