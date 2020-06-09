@@ -43,12 +43,12 @@ You can see three folders and one file:
 * __app__ - folder - contains Python scripts, MUSCLE binaries and a Java tool (for the Cloud use case).
 * __data__ - folder - contains data used by MUSCLE, and containers logs.
 * __logs__ - folder - contains application logs.
-* __README.md__ - folder - application guide.cat
+* __README.md__ - file - application guide.
 
 
 ### Phase 1 - Split the dataset
 
- __Important:__ Python 3 is required.
+ __Important:__ Python 3 is required
 
  ```
  # move to the app directory
@@ -64,10 +64,10 @@ You can see three folders and one file:
  3. Adds a prefix to the input files, e.g. 'in-1-dataset.fas', 'in-2-dataset.fas'.
  4. Creates a log file into the folder 'logs'. Log filename: muscle-orchestrator.log.
 
- Example: In case the 'dataset.fas' file contains 120 sequences, this result to three files in the input folder:
- * in-1-dataset.fas, file that contains 50 sequences, 1 to 50
- * in-2-dataset.fas, file that contains 50 sequences, 51 to 100
- * in-3-dataset.fas, file that contains 20 sequences, 101 to 120
+ __Example:__ In case the 'dataset.fas' file contains 120 sequences, this result to three files in the input folder:
+ * in-1-dataset.fas, file that contains sequences 1 to 50.
+ * in-2-dataset.fas, file that contains sequences 51 to 100.
+ * in-3-dataset.fas, file that contains sequences 101 to 120.
 
 
  ### Phase 2 - MUSCLE parallel execution
