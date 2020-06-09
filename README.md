@@ -17,27 +17,37 @@ In case that the working machine analysis X sequences in T minutes, with the abo
 ## Getting Started Guide
 
 This guide introduces two use cases:
-1. A deadline-based __cloud solution__ with the [MiCADO Scale](https://micado-scale.eu/). MiCADO is develop under the EU project [COLA](https://project-cola.eu/) Cloud Orchestration at the Level of the Application.
+1. A deadline-based __cloud solution__ with the [MiCADO Scale](https://micado-scale.eu/). Requires MiCADO scale, MiCADO is develop under the EU project [COLA](https://project-cola.eu/) Cloud Orchestration at the Level of the Application.
 2. A __standalone solution__ for a single working machine. Requires [Docker engine](https://docs.docker.com/get-docker/).
 
+This guide includes sections with instructions for each use case.
+
+__Important:__ Please review sections _Cloud Solution_ and _Standalone Solution_ before you continue.
+
+
+### Downloading the application
 The first step is to download the application in your working environment.
 To do so, use the download link, or run the following command in your terminal:
-,,,
+ ```
 git clone https://github.com/UoW-CPC/muscle-orchestrator.git
-,,,
+ ```
 
 Then move into muscle-orchestrator folder.
-,,,
+ ```
 cd muscle-orchestrator
-,,,
+ ```
 
 There by using the command:
-,,,
+ ```
 ls
-,,,
+ ```
 
 You can see three folders and one file:
 * __app__ - folder - contains the tools
 * __data__ - folder -
 * __logs__ - folder -
 * __README.md__ - folder -
+
+### Cloud Solution
+
+### Standalone Solution
