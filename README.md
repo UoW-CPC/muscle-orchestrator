@@ -54,20 +54,20 @@ You can see three folders and one file:
  # move to the app directory
  cd app
  python3 split_input.py -f /PATH_TO_THE_DATASET
- # Sample command: python3 split_input.py -f ../data/full_dataset.fas
+ # Sample command: python3 split_input.py -f ../data/dataset.fas
  # move again to the parent directory
  cd ..
  ```
  This sample command performs several steps:
- 1. Reads the file 'full_dataset.fas' from the folder 'data'.
+ 1. Reads the file 'dataset.fas' from the folder 'data'.
  2. Splits the dataset in fas files of 50 sequences and save the files in folder 'data/input'.
- 3. Adds a prefix to the input files, e.g. 'in-1-full_dataset.fas', 'in2-2-full_dataset.fas'.
+ 3. Adds a prefix to the input files, e.g. 'in-1-dataset.fas', 'in-2-dataset.fas'.
  4. Creates a log file into the folder 'logs'. Log filename: muscle-orchestrator.log.
 
- Example: In case the full_dataset.fas file contains 120 sequences, this result to three files in the input folder:
- * in-1-full_dataset.fas, file that contains 50 sequences, 1 to 50
- * in-2-full_dataset.fas, file that contains 50 sequences, 51 to 100
- * in-3-full_dataset.fas, file that contains 20 sequences, 101 to 120
+ Example: In case the 'dataset.fas' file contains 120 sequences, this result to three files in the input folder:
+ * in-1-dataset.fas, file that contains 50 sequences, 1 to 50
+ * in-2-dataset.fas, file that contains 50 sequences, 51 to 100
+ * in-3-dataset.fas, file that contains 20 sequences, 101 to 120
 
 
  ### Phase 2 - MUSCLE parallel execution
@@ -102,17 +102,19 @@ Your can now go to phase 3 and merge the results with MUSCLE profile option.
 
 In this scenario you manually start a MUSCLE container for every input file.
 
-__Warning:__ Each container requires resources to run, so run in parallel as many containers you system can handle.
-
 Starting a MUSCLE container:
-Manual start a MUSCLE container for each file.
-sudo docker run -it -v ${PWD}:/muscle/data/output/ dkagialis/muscle:0.4 /muscle/app/execute.sh ../data/input/in3.fas
-2. Run a container
-3. for MUSCLE container we see an output file out-1-
-4. for MUSCLE container we see a log file in
-5. Repeat steps 1-4 until you finish your analysis. When all jobs are completed you will have an output file for each input file.
+ ```
+ # Move to the data folder
+ cd data
+ # Run a MUSCLE container for a single file
+ sudo docker run -it -v ${PWD}:/muscle/data/ dkagialis/muscle:0.4 /muscle/app/execute.sh ../data/input/PUT_THE_FILE
+ # Sample command: sudo docker run -it -v ${PWD}:/muscle/data/ dkagialis/muscle:0.4 /muscle/app/execute.sh ../data/input/in-1-dataset.fas
+ ```
+ The container initiates a MUSCLE process, takes as an input the given file and writes the output in the folder 'data/output'. The process change again the prefix in the outfile, e.g. out-1-dataset.afas in our case.
 
+ Repeat the above steps until you analyse all your files. When all jobs are completed you will have an output file for each input file.
 
+__Warning:__ Each container requires resources to run, so run in parallel as many containers you system can handle.
 
 ### Phase 3 - Merge the outputs with MUSCLE profile.
 
