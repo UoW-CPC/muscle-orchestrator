@@ -159,6 +159,7 @@ __Notice:__ The application is designed to work in a linux platform. In case you
 
  At this point you have completed your MSA and you can take the output 'results.afas' for further analysis, from the folder 'data/final'.
 
+__Important:__ Please, consider to clear the various data folders, to avoid unexpected behaviour at a next analysis.
 
  __Notice:__ For information regarding the MUSCLE container please review our repository [here](https://github.com/UoW-CPC/muscle-container).
 
