@@ -118,7 +118,7 @@ Starting a MUSCLE container:
 
 __Warning:__ Each container requires resources to run, so run in parallel as many containers you system can handle.
 
-You can view the log for this process in the folder 'data/logs'. In this folder there is one log file for each container you start. These log files contain information about the input, output files, and MUSCLE phases.
+You can view the logs for this process in the folder 'data/logs'. In this folder there is one log file for each container you start. These log files contain information about the input, output files, and MUSCLE phases.
 
 ### Phase 3 - Merge the outputs with MUSCLE profile.
 
