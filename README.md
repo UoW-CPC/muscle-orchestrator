@@ -58,11 +58,11 @@ You can see three folders and one file:
  # move again to the parent directory
  cd ..
  ```
- This sample command performs several steps:
+ This sample command performs several actions:
  1. Reads the file 'dataset.fas' from the folder 'data'.
  2. Splits the dataset in fas files of 50 sequences and save the files in folder 'data/input'.
  3. Adds a prefix to the input files, e.g. 'in-1-dataset.fas', 'in-2-dataset.fas'.
- 4. Creates a log file into the folder 'logs'. Log filename: muscle-orchestrator.log.
+ 4. Writes details related to this process to a log file into the folder 'logs'. Log filename: muscle-orchestrator.log.
 
  __Example:__ In case the 'dataset.fas' file contains 120 sequences, this result to three files in the input folder:
  * in-1-dataset.fas, file that contains sequences 1 to 50.
@@ -110,6 +110,8 @@ Starting a MUSCLE container:
  # Run a MUSCLE container for a single file
  sudo docker run -it -v ${PWD}:/muscle/data/ dkagialis/muscle /muscle/app/execute.sh ../data/input/FILENAME
  # Sample command: sudo docker run -it -v ${PWD}:/muscle/data/ dkagialis/muscle /muscle/app/execute.sh ../data/input/in-1-dataset.fas
+ # Move back to the parent folder
+ cd ..
  ```
 
  The container initiates a MUSCLE process, takes as an input the given file, and writes the output in the folder 'data/output'. The process changes the prefix from 'in' to 'out' in the output file, e.g. out-1-dataset.afas in our example.
@@ -122,7 +124,24 @@ You can view the logs for this process in the folder 'data/logs'. In this folder
 
 ### Phase 3 - Merge the outputs with MUSCLE profile.
 
-Final step of the process:
+Having completed phase 2, in the folder 'data/output' there are several afas file (one for each input file). At this point the MUSCLE profile option is being used to merge all these files.
 
+The above process is being performed by the application. The application iteratively parses all the files in the output folder and initiates MUSCLE as many times is required to merge them in a single afas file.
+
+MUSCLE profile:
+
+ ```
+ # Move to the app folder
+ cd app
 python3 profile_output.py
- __Important:__ Your dataset must contain more than 100 sequences. Otherwise you might get unexpected results
+ ```
+
+ The above script performs several actions:
+ 1. Passes to the MUSCLE the first two files from the 'data/output' folder and writes the output 'temp-1.afas' in the 'data/profile' folder.
+ 2. Passes to the MUSCLE the third file from the 'data/output' folder and the 'temp-1.afas' from the 'data/profile', and writes the output 'temp-2.afas' in the 'data/profile' folder.
+ 3. Repeat the 2 step until all files have been processed.
+ 4. In the last iteration in step 3 MUSCLE takes as input the last file from the 'data/output' folder and the last file created in the 'data/profile', and writes the output 'results.afas' to the folder 'data/result'.
+ 5. Writes details related to this process to a log file into the folder 'logs'. Log filename: muscle-orchestrator.log.
+
+ __Important:__ Your dataset must contain more than 100 sequences. Otherwise you might get unexpected results.
+
