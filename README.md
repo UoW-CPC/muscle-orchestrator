@@ -17,8 +17,8 @@ In case that the working machine analyse X sequences in T minutes, with the abov
 ## Getting Started Guide
 
 This guide introduces two use cases:
-1. A __Cloud Solution__ with [MiCADO Scale](https://micado-scale.eu/). MiCADO Scale is develop under the EU project [COLA](https://project-cola.eu/). Requires MiCADO Scale, [Installation guide](https://micado-scale.readthedocs.io/en/latest/).
-2. A __Standalone Solution__ for a single working machine. Requires Docker, [Installation guide](https://docs.docker.com/get-docker/).
+1. A __Cloud Solution__ with [MiCADO Scale](https://micado-scale.eu/). MiCADO Scale is develop under the EU project [COLA](https://project-cola.eu/). Requires MiCADO Scale, for installation instructions see [here](https://micado-scale.readthedocs.io/en/latest/).
+2. A __Standalone Solution__ for a single working machine. Requires Docker, for instalation instructions see [here](https://docs.docker.com/get-docker/).
 
 __Important:__ This guide includes sections with instructions for each use case. Please review sections _Cloud Solution_ and _Standalone Solution_ before you continue.
 
