@@ -108,8 +108,8 @@ Starting a MUSCLE container:
  # Move to the data folder
  cd data
  # Run a MUSCLE container for a single file
- sudo docker run -it -v ${PWD}:/muscle/data/ dkagialis/muscle:0.4 /muscle/app/execute.sh ../data/input/FILENAME
- # Sample command: sudo docker run -it -v ${PWD}:/muscle/data/ dkagialis/muscle:0.4 /muscle/app/execute.sh ../data/input/in-1-dataset.fas
+ sudo docker run -it -v ${PWD}:/muscle/data/ dkagialis/muscle /muscle/app/execute.sh ../data/input/FILENAME
+ # Sample command: sudo docker run -it -v ${PWD}:/muscle/data/ dkagialis/muscle /muscle/app/execute.sh ../data/input/in-1-dataset.fas
  ```
 
  The container initiates a MUSCLE process, takes as an input the given file, and writes the output in the folder 'data/output'. The process changes the prefix from 'in' to 'out'for the output file, e.g. out-1-dataset.afas in our case.
