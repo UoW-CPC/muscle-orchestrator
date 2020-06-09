@@ -46,7 +46,7 @@ You can see three folders and one file:
 * __README.md__ - folder - application guide.
 
 
-### Phase 1 - Splitting the dataset.
+### Phase 1 - Split the dataset
 
  __Important:__ Python 3 is required.
 
@@ -58,7 +58,7 @@ You can see three folders and one file:
  1. Reads the file full_dataset.fas from the folder 'data'.
  2. Splits the dataset in fas files of 50 sequences and save the files in folder 'data/input'.
  3. Adds a prefix to the input files, e.g. in-1-full_dataset.fas, in2-2-full_dataset.fas
- 4 . LOGs
+ 4. Creates a log file into the folder 'logs'. Log filename: muscle-orchestrator.log.
 
  Example: In case the full_dataset.fas file contains 120 sequences, this result to three files in the input folder:
  * in-1-full_dataset.fas, file that contains 50 sequences, 1 to 50
@@ -66,28 +66,50 @@ You can see three folders and one file:
  * in-3-full_dataset.fas, file that contains 20 sequences, 101 to 120
 
 
- ### Phase 2 - MUSCLE parallel execution.
+ ### Phase 2 - MUSCLE parallel execution
 
 In this phase we perform MSA for the files created in the previous step. From the proposed solutions choose the one that fits to your needs.
 
 #### Cloud Solution
 
-To follow this solution, jQueuer application needs to be deployed through MiCADO in a Cloud environments.
+To follow this solution, jQueuer application needs to be deployed through MiCADO in a Cloud environment.
 A MiCADO Scale deployment guide is not in the scope of this guide. Please, feel free to ask for guidance by contacting us [here](https://micado-scale.eu/contact/).
 
 __Notice__: jQueuer is an application that creates a queue of jobs and sends these jobs to MiCADO worker nodes. The worker nodes execute the jobs and when a job completes jQeuer send another job from the queue.
 This allow us to automate the process by defining several jobs and start them in multiple worker nodes.
 
-Follow this steps to perform:
+If you have jQeuer deployed through MiCADO, follow this steps to perform your MSA:
 
-1. MUSCLE
-2. input
-3. output
-4. logs
+1. Create a jQueuer expirement file.
+__Important:__ Java 8 is required
 
+ ```
+ java
+ ```
+2. Take the output.json file from the folder... and sumbit it to the jQueuer web interface.
+This process instruct the worker node to run MUSCLE into a container and defines the input data.
+3. For every MUSCLE container we see an output file out-1-
+4. For every MUSCLE container we see a log file in
+5. When all jobs are completed you will have an output file for each input file.
+
+Your can now go to phase 3 and merge the results with MUSCLE profile option.
 
 #### Standalone Solution
+Here we don't have jQueuer and MiCADO to automate the process for us; therefore we manually start MUSCLE containers for all the input files.
 
-### Phase 3 - Merge outputs with MUSCLE profile.
+__Warning:__ each container requires resources, so run in paraller as many containers you system can handle.
+Manual start a MUSCLE container for each file.
+1. Define input
+2. Run a container
+3. for MUSCLE container we see an output file out-1-
+4. for MUSCLE container we see a log file in
+5. Repeat steps 1-4 until you finish your analysis. When all jobs are completed you will have an output file for each input file.
 
+
+
+### Phase 3 - Merge the outputs with MUSCLE profile.
+
+Final step of the process:
+
+python3 profile_output.py
  __Important:__ Your dataset must contain more than 100 sequences. Otherwise you might get unexpected results
