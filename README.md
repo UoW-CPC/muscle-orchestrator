@@ -157,7 +157,7 @@ __Notice:__ The application is designed to work in a linux platform. In case you
  4. In the last iteration of step 3, MUSCLE takes as an input the last file from the 'data/output' folder and the last temp file created in the 'data/profile', and writes the output 'results.afas' to the folder 'data/final'.
  5. Writes details related to this process to a log file into the folder 'logs'. Log filename: muscle-orchestrator.log.
 
- At this point you have completed your MSA. Tou can go the folder 'data/final' and take the output 'results.afas' for further analysis.
+ At this point you have completed your MSA. Υou can go the folder 'data/final' and take the output 'results.afas' for further analysis.
 
 __Important:__ Please, consider to clear the various data folders, to avoid unexpected behaviour at a next analysis.
 
